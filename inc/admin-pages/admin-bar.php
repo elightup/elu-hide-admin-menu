@@ -37,11 +37,11 @@ foreach ( $ham_nodes as $k => $node ) {
 ?>
 
 	<div class="wrap">
-		<h2><?php _e( 'Hide Admin Bar', 'ham' ); ?></h2>
+		<h2><?php _e( 'Hide Admin Bar', 'elu-hide-admin-menu' ); ?></h2>
 
 		<div class="notice notice-warning">
-			<p><?php esc_html_e( 'Checking a checkbox disables the access to the menu item for the corresponding role.', 'ham' ); ?></p>
-			<p><?php esc_html_e( 'If no checkbox is available, it means the corresponding role cannot access the menu item by default (and you can\'t enable it with this plugin either).', 'ham' ); ?></p>
+			<p><?php esc_html_e( 'Checking a checkbox disables the access to the menu item for the corresponding role.', 'elu-hide-admin-menu' ); ?></p>
+			<p><?php esc_html_e( 'If no checkbox is available, it means the corresponding role cannot access the menu item by default (and you can\'t enable it with this plugin either).', 'elu-hide-admin-menu' ); ?></p>
 		</div>
 
 		<form method="post" action="options.php">
@@ -51,7 +51,7 @@ foreach ( $ham_nodes as $k => $node ) {
 			<table class="widefat" id="ham-selection">
 				<thead>
 				<tr>
-					<th><?php _e( 'Menu Item', 'ham' ); ?></th>
+					<th><?php _e( 'Menu Item', 'elu-hide-admin-menu' ); ?></th>
 					<?php
 					foreach ( $roles as $role => $name ) {
 						echo "<th class='ham-center'>{$name}</th>";
@@ -68,7 +68,7 @@ foreach ( $ham_nodes as $k => $node ) {
 				</tbody>
 				<tfoot>
 				<tr>
-					<th><?php _e( 'Menu Item', 'ham' ); ?></th>
+					<th><?php _e( 'Menu Item', 'elu-hide-admin-menu' ); ?></th>
 					<?php
 					foreach ( $roles as $role => $name ) {
 						echo "<th class='ham-center'>{$name}</th>";
@@ -78,8 +78,8 @@ foreach ( $ham_nodes as $k => $node ) {
 				</tfoot>
 			</table>
 			<p class="submit">
-				<?php submit_button( __( 'Save Settings', 'ham' ), 'primary', 'submit', false ); ?>
-				<?php submit_button( __( 'Reset', 'ham' ), 'primary', 'reset', false ); ?>
+				<?php submit_button( __( 'Save Settings', 'elu-hide-admin-menu' ), 'primary', 'submit', false ); ?>
+				<?php submit_button( __( 'Reset', 'elu-hide-admin-menu' ), 'primary', 'reset', false ); ?>
 			</p>
 		</form>
 	</div>
@@ -110,19 +110,19 @@ function ham_show_admin_bar_item( $node, $depth = 0 ) {
 		// Treat specially for special items
 		switch ( $node->id ) {
 			case 'wp-logo':
-				$title = __( 'WordPress Logo', 'ham' );
+				$title = __( 'WordPress Logo', 'elu-hide-admin-menu' );
 				break;
 			case 'comments':
-				$title = __( 'Comments', 'ham' );
+				$title = __( 'Comments', 'elu-hide-admin-menu' );
 				break;
 			case 'updates':
-				$title = __( 'Updates', 'ham' );
+				$title = __( 'Updates', 'elu-hide-admin-menu' );
 				break;
 			case 'my-account':
-				$title = __( 'My Account', 'ham' );
+				$title = __( 'My Account', 'elu-hide-admin-menu' );
 				break;
 			case 'user-info':
-				$title = __( 'User Info', 'ham' );
+				$title = __( 'User Info', 'elu-hide-admin-menu' );
 				break;
 			default:
 				$title = wp_strip_all_tags( $node->title );

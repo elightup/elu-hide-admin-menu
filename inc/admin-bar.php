@@ -9,8 +9,8 @@ class HAM_Admin_Bar extends Peace_Admin_Page {
 	 */
 	public function __construct() {
 		$page_options = array(
-			'menu_title' => __( 'Admin Bar', 'ham' ),
-			'page_title' => __( 'Hide Admin Bar', 'ham' ),
+			'menu_title' => __( 'Admin Bar', 'elu-hide-admin-menu' ),
+			'page_title' => __( 'Hide Admin Bar', 'elu-hide-admin-menu' ),
 			'parent'     => 'hide-admin-menu',
 			'capability' => 'manage_options',
 		);
@@ -69,10 +69,10 @@ class HAM_Admin_Bar extends Peace_Admin_Page {
 	 * Enqueue scripts and styles for 'admin bar' configuration page
 	 */
 	public function enqueue() {
-		wp_enqueue_style( 'ham', HAM_CSS_URL . 'style.css' );
+		wp_enqueue_style( 'elu-hide-admin-menu', HAM_CSS_URL . 'style.css' );
 
 		wp_register_script( 'ham-jquery-tablescroll', HAM_JS_URL . 'tablescroll-min.js', array( 'jquery' ) );
-		wp_enqueue_script( 'ham', HAM_JS_URL . 'script.js', array( 'ham-jquery-tablescroll' ) );
+		wp_enqueue_script( 'elu-hide-admin-menu', HAM_JS_URL . 'script.js', array( 'ham-jquery-tablescroll' ) );
 	}
 
 	/**

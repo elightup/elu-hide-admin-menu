@@ -6,7 +6,7 @@ add_action( 'plugins_loaded', 'ham_load_textdomain' );
  * Load plugin textdomain
  */
 function ham_load_textdomain() {
-	load_plugin_textdomain( 'ham', false, basename( HAM_DIR ) . '/lang/' );
+	load_plugin_textdomain( 'elu-hide-admin-menu', false, basename( HAM_DIR ) . '/languages/' );
 }
 
 /**

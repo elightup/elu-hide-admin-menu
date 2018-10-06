@@ -12,14 +12,14 @@ $roles = $wp_roles->get_names();
 $alternate = true;
 ?>
 <div class="wrap">
-	<h1><?php _e( 'Hide Admin Menu', 'ham' ); ?></h1>
+	<h1><?php _e( 'Hide Admin Menu', 'elu-hide-admin-menu' ); ?></h1>
 	<div class="notice notice-warning">
-		<p><?php esc_html_e( 'Checking a checkbox disables the access to the menu item for the corresponding role.', 'ham' ); ?></p>
-		<p><?php esc_html_e( 'If no checkbox is available, it means the corresponding role cannot access the menu item by default (and you can\'t enable it with this plugin either).', 'ham' ); ?></p>
+		<p><?php esc_html_e( 'Checking a checkbox disables the access to the menu item for the corresponding role.', 'elu-hide-admin-menu' ); ?></p>
+		<p><?php esc_html_e( 'If no checkbox is available, it means the corresponding role cannot access the menu item by default (and you can\'t enable it with this plugin either).', 'elu-hide-admin-menu' ); ?></p>
 		<?php if ( is_multisite() ) : ?>
-			<p><?php esc_html_e( 'Disabled (grey) checkbox means the corresponding menu is hidden network-wide.', 'ham' ); ?></p>
+			<p><?php esc_html_e( 'Disabled (grey) checkbox means the corresponding menu is hidden network-wide.', 'elu-hide-admin-menu' ); ?></p>
 		<?php endif; ?>
-		<p><strong><?php esc_html_e( 'If you\'re the Administrator, don\'t check any checkboxes unless you really want to lock yourself out of that menu item.', 'ham' ); ?></strong></p>
+		<p><strong><?php esc_html_e( 'If you\'re the Administrator, don\'t check any checkboxes unless you really want to lock yourself out of that menu item.', 'elu-hide-admin-menu' ); ?></strong></p>
 	</div>
 
 	<form method="post" action="<?php echo $action_page; ?>">
@@ -29,7 +29,7 @@ $alternate = true;
 		<table class="widefat" id="ham-selection">
 			<thead>
 			<tr>
-				<th><?php _e( 'Menu Item', 'ham' ); ?></th>
+				<th><?php _e( 'Menu Item', 'elu-hide-admin-menu' ); ?></th>
 				<?php
 				foreach ( $roles as $role => $name ) {
 					echo "<th class='ham-center'>{$name}</th>";
@@ -44,7 +44,7 @@ $alternate = true;
 				if ( $top_text == '' ) {
 					// If this is a separator
 					if ( in_array( 'wp-menu-separator', $top_item ) || in_array( 'wp-menu-separator-last', $top_item ) ) {
-						$top_text = __( 'Separator', 'ham' );
+						$top_text = __( 'Separator', 'elu-hide-admin-menu' );
 					}
 					// Otherwise, the top menu has no title, it still appears in WP admin area, so we don't ignore it
 				}
@@ -165,7 +165,7 @@ $alternate = true;
 			</tbody>
 			<tfoot>
 			<tr>
-				<th><?php _e( 'Menu Item', 'ham' ); ?></th>
+				<th><?php _e( 'Menu Item', 'elu-hide-admin-menu' ); ?></th>
 				<?php
 				foreach ( $roles as $role => $name ) {
 					echo "<th class='ham-center'>{$name}</th>";
@@ -175,8 +175,8 @@ $alternate = true;
 			</tfoot>
 		</table>
 		<p class="submit">
-			<?php submit_button( __( 'Save Settings', 'ham' ), 'primary', 'submit', false ); ?>
-			<?php submit_button( __( 'Reset', 'ham' ), 'primary', 'reset', false ); ?>
+			<?php submit_button( __( 'Save Settings', 'elu-hide-admin-menu' ), 'primary', 'submit', false ); ?>
+			<?php submit_button( __( 'Reset', 'elu-hide-admin-menu' ), 'primary', 'reset', false ); ?>
 		</p>
 	</form>
 </div>

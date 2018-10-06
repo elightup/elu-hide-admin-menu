@@ -9,7 +9,7 @@ class HAM_Imex extends Peace_Admin_Page {
 	 */
 	public function __construct() {
 		$page_options = array(
-			'menu_title' => __( 'Import & Export', 'ham' ),
+			'menu_title' => __( 'Import & Export', 'elu-hide-admin-menu' ),
 			'parent'     => 'hide-admin-menu',
 			'capability' => 'manage_options',
 			'multisite'  => true,
@@ -67,13 +67,13 @@ class HAM_Imex extends Peace_Admin_Page {
 
 		$error = $menu_option = $bar_option = '';
 		if ( ! isset( $_FILES['setting']['error'] ) || $_FILES['setting']['error'] != UPLOAD_ERR_OK ) {
-			$error = __( 'Error uploading file. Please try again.', 'ham' );
+			$error = __( 'Error uploading file. Please try again.', 'elu-hide-admin-menu' );
 		} else {
 			$content = file_get_contents( $_FILES['setting']['tmp_name'] );
 
 			// No file content or error reading
 			if ( ! $content ) {
-				$error = __( 'Cannot read file content. Please try again.', 'ham' );
+				$error = __( 'Cannot read file content. Please try again.', 'elu-hide-admin-menu' );
 			}
 
 			list( $menu_option, $bar_option ) = explode( '##RW##', $content );
@@ -84,7 +84,7 @@ class HAM_Imex extends Peace_Admin_Page {
 			$bar_option  = @unserialize( $bar_option );
 
 			if ( false === $menu_option || false === $bar_option ) {
-				$error = __( 'Invalid file content. Please try again.', 'ham' );
+				$error = __( 'Invalid file content. Please try again.', 'elu-hide-admin-menu' );
 			}
 		}
 
@@ -98,7 +98,7 @@ class HAM_Imex extends Peace_Admin_Page {
 				update_option( HAM_SETTING_BAR, $bar_option );
 			}
 
-			add_settings_error( $this->page_id, '', __( 'Settings imported successfully.', 'ham' ), 'updated' );
+			add_settings_error( $this->page_id, '', __( 'Settings imported successfully.', 'elu-hide-admin-menu' ), 'updated' );
 		}
 	}
 

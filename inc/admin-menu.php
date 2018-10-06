@@ -9,9 +9,9 @@ class HAM_Admin_Menu extends Peace_Admin_Page {
 	 */
 	public function __construct() {
 		$page_options = array(
-			'menu_title' => __( 'Hide Menu', 'ham' ),
-			'page_title' => __( 'Hide Admin Menu', 'ham' ),
-			'submenu'    => __( 'Admin Menu', 'ham' ),
+			'menu_title' => __( 'Hide Menu', 'elu-hide-admin-menu' ),
+			'page_title' => __( 'Hide Admin Menu', 'elu-hide-admin-menu' ),
+			'submenu'    => __( 'Admin Menu', 'elu-hide-admin-menu' ),
 			'capability' => 'manage_options',
 			'icon_url'   => 'dashicons-hidden',
 			'multisite'  => true,
@@ -63,9 +63,9 @@ class HAM_Admin_Menu extends Peace_Admin_Page {
 		if ( ! empty( $_POST['reset'] ) ) {
 			$settings = array();
 
-			add_settings_error( $this->page_id, '', __( 'Settings reset.', 'ham' ), 'updated' );
+			add_settings_error( $this->page_id, '', __( 'Settings reset.', 'elu-hide-admin-menu' ), 'updated' );
 		} else {
-			add_settings_error( $this->page_id, '', __( 'Settings updated.', 'ham' ), 'updated' );
+			add_settings_error( $this->page_id, '', __( 'Settings updated.', 'elu-hide-admin-menu' ), 'updated' );
 		}
 
 		return $settings;
@@ -90,10 +90,10 @@ class HAM_Admin_Menu extends Peace_Admin_Page {
 	 * Enqueue scripts and styles for 'menu' configuration page
 	 */
 	public function enqueue() {
-		wp_enqueue_style( 'ham', HAM_CSS_URL . 'style.css' );
+		wp_enqueue_style( 'elu-hide-admin-menu', HAM_CSS_URL . 'style.css' );
 
 		wp_register_script( 'ham-jquery-tablescroll', HAM_JS_URL . 'tablescroll-min.js', array( 'jquery' ) );
-		wp_enqueue_script( 'ham', HAM_JS_URL . 'script.js', array( 'ham-jquery-tablescroll' ) );
+		wp_enqueue_script( 'elu-hide-admin-menu', HAM_JS_URL . 'script.js', array( 'ham-jquery-tablescroll' ) );
 	}
 
 	/**
