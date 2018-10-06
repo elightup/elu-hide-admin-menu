@@ -1,0 +1,27 @@
+#ham-selection tr:hover {
+	background: #feefb3;
+}
+.widefat .ham-center {
+	text-align: center;
+}
+.ham-separator {
+	background: #d1f3ac;
+	font-weight: bold;
+}
+.ham-item-level-0 td:first-child {
+	font-weight: bold;
+	padding-left: 20px;
+}
+.ham-item-level-1 td:first-child {
+	font-style: italic;
+	padding-left: 40px;
+}
+.ham-item-level-2 td:first-child {
+	padding-left: 60px;
+}
+.ham-item-level-3 td:first-child {
+	padding-left: 80px;
+}
+#ham-selection .ham-center {
+	text-align: center;
+}
