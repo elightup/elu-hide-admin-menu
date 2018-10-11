@@ -25,6 +25,14 @@ The **ELU Hide Admin Menu** plugin works well with custom user roles and menu it
 - Ability to export and import settings.
 - Works in Multisite mode. Setup for whole network only ONCE. You don't need to go to each blog admin page to setup the plugin anymore.
 
+### User roles / capabilities
+
+Please note that the plugin does **not** alter or create user roles or capabilities. It simply uses the user roles as conditions to hide the admin menu / admin bar items.
+
+It's recommended to use a role management plugin (like [Members](https://wordpress.org/plugins/members/)) to create roles and then use this plugin to control the menu visibility.
+
+**Warning:** Be careful if you hide menus from **administrators**. You'll loose access to these menus. If you want to block access to certain menu items for other administrators, please create another role and move those users to that role. Then use the plugin to hide menus from them.
+
 ### Bug reports
 
 If you find any problems using the plugin, please [open a new issue on Github](https://github.com/elightup/elu-hide-admin-menu).
@@ -43,6 +51,20 @@ If you find any problems using the plugin, please [open a new issue on Github](h
 1. Click **Activate** button to activate the plugin
 
 == Frequently Asked Questions ==
+
+### Does the plugin alter or create user roles?
+
+No. The plugin simply uses the user roles as conditions to hide the admin menu / admin bar items.
+
+It's recommended to use a role management plugin (like [Members](https://wordpress.org/plugins/members/)) to create roles and then use this plugin to control the menu visibility.
+
+### What happens if I hide menus from myself?
+
+You'll loose access to these menus! So be careful with that, especially when you're administrators.
+
+### How to hide menus from other admins?
+
+Please create another role using a role management plugin (like [Members](https://wordpress.org/plugins/members/)) and move those admins to that role. Then use the plugin to hide menus from them.
 
 == Screenshots ==
 

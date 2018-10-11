@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: ELU Hide Admin Menu
- * Plugin URI: https://elightup/wordpress-plugins/elu-hide-admin-menu/
+ * Plugin URI: https://elightup.com
  * Description: Hide unneeded items in admin menu and admin bar. Customizable by user role.
  * Version: 1.0.0
  * Author: eLightUp
- * Author URI: https://elightup
+ * Author URI: https://elightup.com
  */
 
 // Define plugin URLs, for fast enqueuing scripts and styles
